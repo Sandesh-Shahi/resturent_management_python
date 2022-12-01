@@ -358,15 +358,17 @@ def menu():  # this is main function
                     count_pdf = 50
                     f = open('bill.txt', 'r+')
                     f.truncate(0)
-            elif Choice == 5:  # Search for pdf bill
-                bill_no = (input("Enter the name for bill pdf search: "))
-                f = open("{}.pdf".format(name), "r")
-                content = f.readlines()
-                for i in content:
-                    print(i)
-                    f.close()
-
-                print(content)
+            elif Choice == 5:  # -----------------------------------------------Search for pdf bill
+                if count_pdf==50:
+                    print("")
+                    print('''{}.pdf  is Found !!
+                     please check your file !
+                    
+                    '''.format(name))
+                else:
+                    print("")          
+                    print("{}.pdf  is  not Found !!".format(name))
+                    print("Please Generate Your Bill PDF file ")
 # EXIT FROM SYSTEM------------------------------------------------------Exit From System-------------direct--Exit
             elif Choice == 6:
                 if count_menu !=0:
